@@ -1,1 +1,3 @@
 *.pyc
+nginx-site.conf
+radio_control.ini

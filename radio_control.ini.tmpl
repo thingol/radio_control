@@ -1,0 +1,12 @@
+[uwsgi]
+chdir = /path/to/radio_control
+module = wsgi
+
+master = true
+processes = 5
+
+socket = /path/to/radio_control.sock
+chmod-socket = 660
+vacuum = true
+
+#die-on-term = true
