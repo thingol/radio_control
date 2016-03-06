@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, render_template, request
 
-from config import RADIO, BARNA
+from config import RADIO
 from mpd_conn import dec_vol, inc_vol, init, play, stop
 
 app = Flask("RadioControl")
