@@ -18,8 +18,7 @@ def index():
         elif request.args['action'] == 'dec_vol':
             dec_vol()
     
-    return render_template("index.html",
-                           RADIO=RADIO, BARNA=BARNA);
+    return render_template("index.html", RADIO=RADIO);
     
 
 if __name__ == '__main__':
