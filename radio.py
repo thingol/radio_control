@@ -6,7 +6,7 @@ from mpd_conn import dec_vol, inc_vol, init, play, stop
 
 app = Flask("RadioControl")
 
-@app.route('/', methods=['GET'])
+@app.route('/radio/', methods=['GET'])
 def index():
     if request.args.has_key('action'):
         if request.args['action'] == 'play':
