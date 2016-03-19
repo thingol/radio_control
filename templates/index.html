@@ -12,26 +12,13 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     
   <body>
     <ul>
-      {% if RADIO %}
-        {% for station in RADIO %}
-          <li>
-            <a href="?action=play&playlist={{ station.name }}">
-              {{ station.display_name }}
-            </a>
-          </li>
-        {% endfor %}
-      {% endif %}
-<!--      <hr/>
-      {% if BARNA %}  
-        {% for album in BARNA %}
-          <li>
-            <a href="?action=play&playlist={{ album.name }}">
-              {{ album.display_name }}
-            </a>
-          </li>
-        {% endfor %}
-      {% endif %}
--->
+      {% for key, value in RADIO.iteritems() %}
+        <li>
+          <a href="?action=play&channel={{ key }}">
+            {{ value['display_name'] }}
+          </a>
+        </li>
+      {% endfor %}
       <hr/>
       <li>
         <a href="?action=stop">Slå av</a> -

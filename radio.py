@@ -10,7 +10,7 @@ app = Flask("RadioControl")
 def index():
     if request.args.has_key('action'):
         if request.args['action'] == 'play':
-            play(request.args['playlist'])
+            play(request.args['channel'])
         elif request.args['action'] == 'stop':
             stop()
         elif request.args['action'] == 'inc_vol':
