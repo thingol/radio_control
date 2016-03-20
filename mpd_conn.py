@@ -3,7 +3,6 @@ from mpd import MPDClient
 from config import MPD_SRV
 
 srv = MPDClient()
-volume = -1
 
 def conn(func):
     def wrapper(*args):
@@ -16,13 +15,11 @@ def conn(func):
 
 @conn
 def init():
-    global volume
     srv.repeat(1)
-    volume = int(srv.status()['volume'])
 
 @conn
 def dec_vol():
-    global volume
+    volume = int(srv.status()['volume'])
     if volume > 50:
         volume -= 2
         srv.setvol(volume)
@@ -32,7 +29,7 @@ def dec_vol():
 
 @conn
 def inc_vol():
-    global volume
+    volume = int(srv.status()['volume'])
     if volume < 100:
         volume += 2
         srv.setvol(volume)
