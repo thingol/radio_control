@@ -30,7 +30,7 @@ def dec_vol():
 @conn
 def inc_vol():
     volume = int(srv.status()['volume'])
-    if volume < 100:
+    if volume < 99:
         volume += 2
         srv.setvol(volume)
         print "volume inreased to " + str(volume)
