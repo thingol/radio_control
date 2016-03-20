@@ -21,9 +21,15 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
       {% endfor %}
       <hr/>
       <li>
-        <a href="?action=stop">Slå av</a> -
-        <a href="?action=dec_vol">Volum -</a> -
-        <a href="?action=inc_vol">Volum +</a>
+        <a href="?action=stop">Slå av</a>
+        <input type="button"
+               onclick="location.href='?action=dec_vol';"
+               value="---"
+               style="height:21px;width:38px;"/> Lyd 
+        <input type="button"
+               onclick="location.href='?action=inc_vol';"
+               value="+++"
+               style="height:21px;width:38px;"/>
       </li>
     </ul>    
   </body>

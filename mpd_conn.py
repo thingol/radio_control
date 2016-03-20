@@ -18,7 +18,7 @@ def conn(func):
 def init():
     global volume
     srv.repeat(1)
-    volume = srv.status()['volume']
+    volume = int(srv.status()['volume'])
 
 @conn
 def dec_vol():
