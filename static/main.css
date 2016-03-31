@@ -1,0 +1,28 @@
+body {
+    margin: 10px;
+    font-family: "Courier New";
+}
+
+.button {
+    height: 40px;
+}
+
+.volum {
+    width: 110px;
+}
+
+.bred {
+    width: 280px;
+}
+
+.kanal {
+    margin-bottom: 2px;
+}
+
+#opp {
+    float: right;
+}
+
+#slaa_av {
+    margin-top: 10px;
+}
