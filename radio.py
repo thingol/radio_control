@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 from config import RADIO
 from mpd_conn import dec_vol, inc_vol, init, play, stop
 
-app = Flask("RadioControl", static_url_path="/radio/static")
+app = Flask("RadioControl")
 
 @app.route('/radio/', methods=['GET'])
 def index():
