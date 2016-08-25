@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from socket import gaierror
+
 from mpd import MPDClient
 from config import MPD_SRV
 
@@ -6,10 +8,13 @@ srv = MPDClient()
 
 def conn(func):
     def wrapper(*args):
-        srv.connect(MPD_SRV['host'], MPD_SRV['port'])
-        srv.password(MPD_SRV['passwd'])
-        func(*args)
-        srv.disconnect()
+        try:
+            srv.connect(MPD_SRV['host'], MPD_SRV['port'])
+            srv.password(MPD_SRV['passwd'])
+            func(*args)
+            srv.disconnect()
+        except gaierror as e:
+            print 'oops: ' + e.__str__()
 
     return wrapper
 

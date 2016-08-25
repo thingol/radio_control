@@ -17,6 +17,6 @@ RADIO={"mdr_info":{"display_name":"MDR Info",
         "url":"http://xapp2023227392c40000.f.l.i.lb.core-cdn.net/40000mb/live/app2023227392/w2075033610/live_de_128.mp3"}}
 RADIO = OrderedDict(sorted(RADIO.items()))
 
-MPD_SRV={"host":"musica.local",
+MPD_SRV={"host":"musica.fritz.box",
          "port":6600,
          "passwd":"hubhub"}
